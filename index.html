@@ -1,102 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Deangarden | Landscape Intelligence</title>
 
 <style>
-body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
-    background:#f5f6f2;
-    color:#222;
+* {
+  box-sizing: border-box;
 }
 
-.container{
-    max-width:960px;
-    margin:0 auto;
-    padding:80px 30px;
+html, body {
+  margin: 0;
+  min-height: 100%;
 }
 
-.small{
-    color:#557055;
-    font-weight:600;
-    letter-spacing:2px;
-    text-transform:uppercase;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  background: #071008;
+  color: #fff;
 }
 
-h1{
-    font-size:64px;
-    margin:18px 0 8px;
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  overflow: hidden;
+  text-align: center;
 }
 
-h2{
-    font-weight:400;
-    color:#3d5b44;
-    margin-bottom:40px;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(3, 8, 4, 0.62), rgba(3, 8, 4, 0.78)),
+    url("images/hero.png");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.03);
+  animation: slowZoom 36s ease-in-out infinite alternate;
 }
 
-p{
-    font-size:22px;
-    line-height:1.7;
-    max-width:760px;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.04), rgba(0,0,0,0.35));
 }
 
-.button{
-    display:inline-block;
-    margin-top:50px;
-    padding:16px 34px;
-    border-radius:8px;
-    background:#2f5d3a;
-    color:white;
-    text-decoration:none;
-    font-weight:600;
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  animation: fadeIn 1.2s ease-out both;
 }
 
-footer{
-    margin-top:100px;
-    color:#777;
-    font-size:15px;
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.2rem, 10vw, 8rem);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  line-height: 0.95;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.field {
+  margin-top: 26px;
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: #b8d2a3;
+  font-weight: 500;
+}
+
+.divider {
+  width: 150px;
+  height: 1px;
+  background: rgba(184, 210, 163, 0.75);
+  margin: 30px auto;
+}
+
+.mission {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: clamp(1.08rem, 2.2vw, 1.45rem);
+  line-height: 1.65;
+  color: #f1f5ed;
+}
+
+.actions {
+  margin-top: 46px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 42px;
+  border: 1px solid rgba(220, 238, 210, 0.75);
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  background: rgba(10, 30, 14, 0.25);
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}
+
+.note {
+  margin-top: 28px;
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(238, 246, 231, 0.72);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1.03); }
+  to { transform: scale(1.1); }
+}
+
+@media (max-width: 640px) {
+  .brand {
+    letter-spacing: 0.11em;
+  }
+
+  .field {
+    letter-spacing: 0.22em;
+  }
+
+  .mission {
+    max-width: 92%;
+  }
 }
 </style>
-
 </head>
 
 <body>
+  <main class="hero">
+    <section class="content">
+      <h1 class="brand">Deangarden</h1>
 
-<div class="container">
+      <div class="field">Landscape Intelligence</div>
 
-<div class="small">
-Landscape Intelligence
-</div>
+      <div class="divider"></div>
 
-<h1>Deangarden</h1>
+      <p class="mission">
+        Connecting AI, robotics and digital twins to observe, understand
+        and steward natural environments.
+      </p>
 
-<h2>
-Connecting AI, robotics and digital twins to observe, understand and steward natural environments.
-</h2>
+      <div class="actions">
+        <a class="button" href="/connect.html">Connect</a>
+      </div>
 
-<p>
-
-Deangarden explores persistent landscape intelligence platforms that combine robotics,
-remote sensing, artificial intelligence and digital twins to create continuously updated
-representations of natural environments.
-
-</p>
-
-<a class="button" href="/connect">
-Conference Contact →
-</a>
-
-<footer>
-
-© Deangarden
-
-</footer>
-
-</div>
-
+      <div class="note">Website under development</div>
+    </section>
+  </main>
 </body>
 </html>

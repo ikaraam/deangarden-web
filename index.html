@@ -6,9 +6,7 @@
 <title>Deangarden</title>
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html, body {
   margin: 0;
@@ -23,11 +21,11 @@ body {
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px 24px;
+  padding: 56px 28px;
   overflow: hidden;
   text-align: center;
 }
@@ -37,42 +35,46 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(6,12,8,0.34), rgba(6,12,8,0.54)),
+    linear-gradient(rgba(5,10,6,0.34), rgba(5,10,6,0.58)),
     url("images/hero.png");
   background-size: cover;
   background-position: center;
   transform: scale(1.03);
-  animation: slowZoom 70s ease-in-out infinite alternate;
+  animation: slowZoom 80s ease-in-out infinite alternate;
 }
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.04), rgba(0,0,0,0.28));
+  background:
+    radial-gradient(circle at center, rgba(255,255,255,0.05), rgba(0,0,0,0.34)),
+    linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.08) 45%, rgba(0,0,0,0.44));
 }
 
 .content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
-  transform: translateY(-35px);
+  max-width: 980px;
+  width: 100%;
+  transform: translateY(-24px);
   animation: fadeIn 1.2s ease-out both;
 }
 
 .brand {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(4rem, 10vw, 8.5rem);
+  font-size: clamp(3rem, 8.8vw, 8rem);
   font-weight: 400;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   line-height: 0.95;
   margin: 0;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .field {
-  margin-top: 24px;
-  font-size: 1.15rem;
+  margin-top: 28px;
+  font-size: 1.05rem;
   letter-spacing: 0.42em;
   color: #c2d9aa;
   font-weight: 500;
@@ -82,16 +84,16 @@ body {
 .divider {
   width: 150px;
   height: 1px;
-  background: rgba(194,217,170,0.78);
-  margin: 24px auto;
+  background: rgba(194,217,170,0.82);
+  margin: 26px auto 28px;
 }
 
 .mission {
-  max-width: 560px;
+  max-width: 620px;
   margin: 0 auto;
-  font-size: clamp(1.08rem, 2vw, 1.35rem);
-  line-height: 1.6;
-  color: #f1f5ed;
+  font-size: clamp(1.1rem, 2.1vw, 1.42rem);
+  line-height: 1.65;
+  color: #f3f6ef;
 }
 
 .actions {
@@ -100,16 +102,17 @@ body {
 
 .button {
   display: inline-block;
-  padding: 20px 54px;
-  border: 1px solid rgba(220,238,210,0.78);
-  border-radius: 40px;
+  padding: 19px 56px;
+  min-width: 270px;
+  border: 1px solid rgba(220,238,210,0.82);
+  border-radius: 999px;
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   backdrop-filter: blur(8px);
-  background: rgba(10,30,14,0.25);
+  background: rgba(10,30,14,0.28);
   transition: all 0.35s ease;
 }
 
@@ -122,26 +125,21 @@ body {
 
 .footer {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 18px;
+  left: 24px;
+  right: 24px;
+  bottom: 28px;
   z-index: 2;
   text-align: center;
   font-size: 0.72rem;
-  letter-spacing: 0.16em;
+  line-height: 2;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(238,246,231,0.52);
+  color: rgba(238,246,231,0.68);
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(-35px);
-  }
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(-24px); }
 }
 
 @keyframes slowZoom {
@@ -149,35 +147,36 @@ body {
   to { transform: scale(1.08); }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 760px) {
   .hero {
-    padding: 40px 18px;
+    align-items: center;
+    padding: 78px 34px 140px;
   }
 
   .content {
-    transform: translateY(-25px);
+    transform: translateY(-8px);
   }
 
   .brand {
-    font-size: clamp(2.65rem, 13vw, 3.9rem);
-    letter-spacing: 0.075em;
+    font-size: clamp(2.15rem, 10.8vw, 3.35rem);
+    letter-spacing: 0.105em;
   }
 
   .field {
-    margin-top: 22px;
-    font-size: 0.82rem;
-    letter-spacing: 0.22em;
+    margin-top: 26px;
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
   }
 
   .divider {
-    margin: 22px auto;
     width: 120px;
+    margin: 24px auto 30px;
   }
 
   .mission {
-    max-width: 92%;
-    font-size: 1.15rem;
-    line-height: 1.55;
+    max-width: 330px;
+    font-size: 1.28rem;
+    line-height: 1.58;
   }
 
   .actions {
@@ -185,24 +184,41 @@ body {
   }
 
   .button {
-    padding: 19px 50px;
+    min-width: 270px;
+    padding: 20px 42px;
     font-size: 0.95rem;
     letter-spacing: 0.24em;
   }
 
   .footer {
-    display: none;
+    bottom: 92px;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
   }
 
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(-25px);
-    }
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(-8px); }
+  }
+}
+
+@media (max-width: 390px) {
+  .hero {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+
+  .brand {
+    font-size: 2.55rem;
+    letter-spacing: 0.08em;
+  }
+
+  .mission {
+    font-size: 1.18rem;
+  }
+
+  .button {
+    min-width: 250px;
   }
 }
 </style>
@@ -228,7 +244,8 @@ body {
   </main>
 
   <div class="footer">
-    © 2026 Deangarden · Buckinghamshire, United Kingdom
+    © 2026 Deangarden<br>
+    Buckinghamshire, United Kingdom
   </div>
 </body>
 </html>

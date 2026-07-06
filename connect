@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Connect | Deangarden</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
+  background:#f6f4ec;
+  color:#142416;
+}
+
+.page{
+  max-width:880px;
+  margin:0 auto;
+  padding:34px 20px 48px;
+}
+
+.brand{
+  text-align:center;
+  margin-bottom:34px;
+}
+
+.brand h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(2rem,8vw,3.6rem);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:400;
+  margin:0;
+}
+
+.brand p{
+  margin-top:12px;
+  color:#557055;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  font-size:.78rem;
+}
+
+.card{
+  background:white;
+  border-radius:30px;
+  padding:30px 24px;
+  box-shadow:0 20px 70px rgba(20,35,22,.13);
+}
+
+.profile{
+  text-align:center;
+}
+
+.portrait{
+  width:132px;
+  height:132px;
+  object-fit:cover;
+  border-radius:50%;
+  margin:0 auto 22px;
+  display:block;
+  border:1px solid rgba(20,35,22,.12);
+}
+
+h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:2.1rem;
+  font-weight:400;
+  margin:0;
+}
+
+.role{
+  margin-top:8px;
+  color:#456847;
+  font-size:1.05rem;
+}
+
+.intro{
+  margin:28px auto 30px;
+  max-width:620px;
+  font-size:1.05rem;
+  line-height:1.7;
+  color:#263b29;
+}
+
+.links{
+  display:grid;
+  gap:14px;
+  margin:26px 0 34px;
+}
+
+.link{
+  display:block;
+  padding:18px 20px;
+  border-radius:18px;
+  text-align:center;
+  text-decoration:none;
+  font-weight:650;
+  background:#17351d;
+  color:white;
+}
+
+.link.secondary{
+  background:#eef2e8;
+  color:#142416;
+  border:1px solid rgba(20,35,22,.12);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  border-top:1px solid #e3e7dc;
+  padding-top:28px;
+}
+
+.section h3{
+  font-size:.78rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#557055;
+  margin:0 0 14px;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.tag{
+  background:#eef2e8;
+  border-radius:999px;
+  padding:10px 14px;
+  font-size:.9rem;
+}
+
+.footer{
+  text-align:center;
+  margin-top:34px;
+  font-size:.9rem;
+  color:#60705f;
+}
+
+.footer a{
+  color:#17351d;
+  text-decoration:none;
+}
+
+@media(max-width:680px){
+  .page{padding:26px 16px 40px}
+  .card{padding:28px 20px;border-radius:26px}
+  .portrait{width:118px;height:118px}
+  h2{font-size:1.9rem}
+  .intro{text-align:left;font-size:1rem}
+  .grid{grid-template-columns:1fr;gap:26px}
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+
+  <section class="brand">
+    <h1>Deangarden</h1>
+    <p>Landscape Intelligence</p>
+  </section>
+
+  <section class="card">
+
+    <div class="profile">
+      <img class="portrait" src="images/portrait.png" alt="Ikaraam Ullah portrait">
+
+      <h2>Connect with Deangarden</h2>
+
+      <div class="role">
+        Ikaraam Ullah<br>
+        Solutions Architect
+      </div>
+    </div>
+
+    <p class="intro">
+      Deangarden brings together robotics, remote sensing and digital twins
+      to build persistent landscape intelligence that helps observe,
+      understand and steward natural environments.
+      <br><br>
+      I welcome conversations with people and organisations working across
+      environmental technology, autonomous systems, sensing, conservation
+      and resilient landscape management.
+    </p>
+
+    <div class="links">
+      <a class="link" href="https://www.linkedin.com/in/ikaraam/">Connect on LinkedIn</a>
+      <a class="link secondary" href="mailto:contact@deangarden.org">contact@deangarden.org</a>
+    </div>
+
+    <div class="grid">
+      <div class="section">
+        <h3>Current Focus</h3>
+        <div class="tags">
+          <span class="tag">Landscape Intelligence</span>
+          <span class="tag">Robotics</span>
+          <span class="tag">Remote Sensing</span>
+          <span class="tag">Digital Twins</span>
+          <span class="tag">Biodiversity</span>
+          <span class="tag">Environmental Monitoring</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Open to Conversations With</h3>
+        <div class="tags">
+          <span class="tag">Universities</span>
+          <span class="tag">Environmental organisations</span>
+          <span class="tag">Technology partners</span>
+          <span class="tag">Conservation practitioners</span>
+          <span class="tag">Landowners</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="footer">
+    Building landscape intelligence for natural environments.<br><br>
+    <a href="/">← Back to Deangarden</a>
+  </div>
+
+</main>
+</body>
+</html>

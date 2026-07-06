@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Deangarden</title>
+<title>Deangarden | Landscape Intelligence</title>
 
 <style>
 * {
@@ -37,40 +37,31 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(6,12,8,0.42), rgba(6,12,8,0.60)),
+    linear-gradient(rgba(3, 8, 4, 0.62), rgba(3, 8, 4, 0.78)),
     url("images/hero.png");
   background-size: cover;
   background-position: center;
   transform: scale(1.03);
-  animation: slowZoom 70s ease-in-out infinite alternate;
+  animation: slowZoom 36s ease-in-out infinite alternate;
 }
 
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.04), rgba(0,0,0,0.32));
+  background: radial-gradient(circle at center, rgba(255,255,255,0.04), rgba(0,0,0,0.35));
 }
 
 .content {
   position: relative;
   z-index: 1;
   max-width: 980px;
-  transform: translateY(-45px);
   animation: fadeIn 1.2s ease-out both;
-}
-
-.kicker {
-  font-size: 0.78rem;
-  letter-spacing: 0.45em;
-  text-transform: uppercase;
-  color: rgba(238,246,231,0.78);
-  margin-bottom: 24px;
 }
 
 .brand {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(4rem, 11vw, 9rem);
+  font-size: clamp(3.2rem, 10vw, 8rem);
   font-weight: 400;
   letter-spacing: 0.18em;
   line-height: 0.95;
@@ -79,9 +70,10 @@ body {
 }
 
 .field {
-  margin-top: 30px;
-  font-size: 1.05rem;
-  letter-spacing: 0.45em;
+  margin-top: 26px;
+  font-size: clamp(0.9rem, 2vw, 1.25rem);
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
   color: #b8d2a3;
   font-weight: 500;
 }
@@ -89,14 +81,14 @@ body {
 .divider {
   width: 150px;
   height: 1px;
-  background: rgba(184,210,163,0.75);
+  background: rgba(184, 210, 163, 0.75);
   margin: 30px auto;
 }
 
 .mission {
-  max-width: 560px;
+  max-width: 760px;
   margin: 0 auto;
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-size: clamp(1.08rem, 2.2vw, 1.45rem);
   line-height: 1.65;
   color: #f1f5ed;
 }
@@ -107,92 +99,59 @@ body {
 
 .button {
   display: inline-block;
-  padding: 18px 46px;
-  border: 1px solid rgba(220,238,210,0.75);
-  border-radius: 40px;
+  padding: 15px 42px;
+  border: 1px solid rgba(220, 238, 210, 0.75);
+  border-radius: 999px;
   color: #fff;
   text-decoration: none;
   font-size: 0.95rem;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   backdrop-filter: blur(8px);
-  background: rgba(10,30,14,0.25);
-  transition: all 0.35s ease;
+  background: rgba(10, 30, 14, 0.25);
+  transition: all 0.25s ease;
 }
 
 .button:hover {
-  background: white;
-  color: #132114;
+  background: rgba(255,255,255,0.12);
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(0,0,0,0.35);
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 18px;
-  z-index: 2;
-  text-align: center;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
+.note {
+  margin-top: 28px;
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(238,246,231,0.58);
+  color: rgba(238, 246, 231, 0.72);
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
-    transform: translateY(-45px);
+    transform: translateY(0);
   }
 }
 
 @keyframes slowZoom {
   from { transform: scale(1.03); }
-  to { transform: scale(1.08); }
+  to { transform: scale(1.1); }
 }
 
 @media (max-width: 640px) {
-  .content {
-    transform: translateY(-20px);
-  }
-
   .brand {
     letter-spacing: 0.11em;
-    font-size: clamp(3rem, 15vw, 5rem);
   }
 
   .field {
-    letter-spacing: 0.24em;
-    font-size: 0.85rem;
-  }
-
-  .kicker {
-    letter-spacing: 0.28em;
+    letter-spacing: 0.22em;
   }
 
   .mission {
     max-width: 92%;
-  }
-
-  .footer {
-    font-size: 0.62rem;
-    bottom: 14px;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-8px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(-20px);
-    }
   }
 }
 </style>
@@ -201,8 +160,6 @@ body {
 <body>
   <main class="hero">
     <section class="content">
-      <div class="kicker">Landscape Research Initiative</div>
-
       <h1 class="brand">Deangarden</h1>
 
       <div class="field">Landscape Intelligence</div>
@@ -210,17 +167,16 @@ body {
       <div class="divider"></div>
 
       <p class="mission">
-        Building landscape intelligence through AI, robotics and digital twins.
+        Connecting AI, robotics and digital twins to observe, understand
+        and steward natural environments.
       </p>
 
       <div class="actions">
         <a class="button" href="/connect.html">Connect</a>
       </div>
+
+      <div class="note">Website under development</div>
     </section>
   </main>
-
-  <div class="footer">
-    © 2026 Deangarden · Buckinghamshire, United Kingdom
-  </div>
 </body>
 </html>

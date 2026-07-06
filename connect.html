@@ -8,46 +8,61 @@
 <style>
 *{box-sizing:border-box}
 
-body{
+html,body{
   margin:0;
+  min-height:100%;
+}
+
+body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;
-  background:#f6f4ec;
-  color:#142416;
+  background:#071008;
+  color:#f4f7ef;
 }
 
 .page{
-  max-width:820px;
+  min-height:100svh;
+  padding:34px 18px 46px;
+  background:
+    linear-gradient(rgba(5,10,6,.72),rgba(5,10,6,.86)),
+    url("images/hero.png");
+  background-size:cover;
+  background-position:center;
+}
+
+.wrap{
+  max-width:760px;
   margin:0 auto;
-  padding:34px 18px 48px;
 }
 
 .brand{
   text-align:center;
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
 .brand h1{
   font-family:Georgia,"Times New Roman",serif;
-  font-size:clamp(2rem,8vw,3.4rem);
-  letter-spacing:.14em;
-  text-transform:uppercase;
+  font-size:clamp(2rem,7vw,3.4rem);
   font-weight:400;
+  letter-spacing:.16em;
+  text-transform:uppercase;
   margin:0;
 }
 
 .brand p{
-  margin-top:12px;
-  color:#557055;
+  margin:12px 0 0;
+  color:#c2d9aa;
   text-transform:uppercase;
-  letter-spacing:.22em;
+  letter-spacing:.28em;
   font-size:.78rem;
 }
 
 .card{
-  background:white;
+  border:1px solid rgba(220,238,210,.22);
+  background:rgba(8,18,10,.62);
+  backdrop-filter:blur(18px);
   border-radius:30px;
   padding:32px 24px;
-  box-shadow:0 20px 70px rgba(20,35,22,.13);
+  box-shadow:0 24px 80px rgba(0,0,0,.36);
 }
 
 .profile{
@@ -55,14 +70,14 @@ body{
 }
 
 .portrait{
-  width:132px;
-  height:132px;
+  width:126px;
+  height:126px;
   object-fit:cover;
   border-radius:50%;
-  margin:0 auto 22px;
   display:block;
-  border:1px solid rgba(20,35,22,.12);
-  box-shadow:0 12px 35px rgba(20,35,22,.18);
+  margin:0 auto 22px;
+  border:1px solid rgba(220,238,210,.35);
+  box-shadow:0 14px 45px rgba(0,0,0,.42);
 }
 
 h2{
@@ -73,56 +88,58 @@ h2{
 }
 
 .role{
-  margin-top:8px;
-  color:#456847;
-  font-size:1.05rem;
+  margin-top:10px;
+  color:#c2d9aa;
+  font-size:1.02rem;
+  line-height:1.6;
 }
 
 .intro{
-  margin:28px auto 30px;
+  margin:30px auto 30px;
   max-width:620px;
-  font-size:1.05rem;
-  line-height:1.7;
-  color:#263b29;
+  font-size:1.04rem;
+  line-height:1.75;
+  color:#e7efe1;
 }
 
 .links{
   display:grid;
   gap:14px;
-  margin:26px 0 34px;
+  margin:28px 0 34px;
 }
 
 .link{
   display:block;
   padding:18px 20px;
-  border-radius:18px;
+  border-radius:999px;
   text-align:center;
   text-decoration:none;
   font-weight:650;
-  background:#17351d;
-  color:white;
+  letter-spacing:.04em;
+  background:#f4f7ef;
+  color:#132114;
 }
 
 .link.secondary{
-  background:#eef2e8;
-  color:#142416;
-  border:1px solid rgba(20,35,22,.12);
+  background:rgba(255,255,255,.06);
+  color:#f4f7ef;
+  border:1px solid rgba(220,238,210,.34);
 }
 
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:28px;
-  border-top:1px solid #e3e7dc;
-  padding-top:28px;
+  border-top:1px solid rgba(220,238,210,.22);
+  padding-top:30px;
 }
 
 .section h3{
-  font-size:.78rem;
-  letter-spacing:.18em;
+  font-size:.76rem;
+  letter-spacing:.2em;
   text-transform:uppercase;
-  color:#557055;
-  margin:0 0 14px;
+  color:#c2d9aa;
+  margin:0 0 16px;
 }
 
 .tags{
@@ -132,28 +149,30 @@ h2{
 }
 
 .tag{
-  background:#eef2e8;
+  border:1px solid rgba(220,238,210,.24);
+  background:rgba(255,255,255,.06);
   border-radius:999px;
   padding:10px 14px;
   font-size:.9rem;
+  color:#edf4e8;
 }
 
 .footer{
   text-align:center;
-  margin-top:34px;
-  font-size:.9rem;
-  color:#60705f;
+  margin-top:32px;
+  font-size:.88rem;
+  color:rgba(238,246,231,.72);
 }
 
 .footer a{
-  color:#17351d;
+  color:#c2d9aa;
   text-decoration:none;
 }
 
 @media(max-width:680px){
-  .page{padding:26px 16px 40px}
+  .page{padding:26px 14px 40px}
   .card{padding:28px 20px;border-radius:26px}
-  .portrait{width:118px;height:118px}
+  .portrait{width:116px;height:116px}
   h2{font-size:1.9rem}
   .intro{text-align:left;font-size:1rem}
   .grid{grid-template-columns:1fr;gap:26px}
@@ -163,72 +182,72 @@ h2{
 
 <body>
 <main class="page">
+  <div class="wrap">
 
-  <section class="brand">
-    <h1>Deangarden</h1>
-    <p>Landscape Intelligence</p>
-  </section>
+    <section class="brand">
+      <h1>Deangarden</h1>
+      <p>Landscape Intelligence</p>
+    </section>
 
-  <section class="card">
+    <section class="card">
+      <div class="profile">
+        <img class="portrait" src="images/portrait.jpeg" alt="Ikaraam Ullah">
 
-    <div class="profile">
-      <img class="portrait" src="images/portrait.png" alt="Ikaraam Ullah">
+        <h2>Let's connect</h2>
 
-      <h2>Let's connect</h2>
-
-      <div class="role">
-        Ikaraam Ullah<br>
-        Solutions Architect
-      </div>
-    </div>
-
-    <p class="intro">
-      Deangarden brings together robotics, remote sensing and digital twins
-      to build persistent landscape intelligence that helps observe,
-      understand and steward natural environments.
-      <br><br>
-      I welcome conversations with people and organisations working across
-      environmental technology, sensing, conservation and resilient landscape management.
-    </p>
-
-    <div class="links">
-      <a class="link" href="https://www.linkedin.com/in/ikaraam/">Connect on LinkedIn</a>
-      <a class="link secondary" href="mailto:contact@deangarden.org">contact@deangarden.org</a>
-    </div>
-
-    <div class="grid">
-      <div class="section">
-        <h3>Current Focus</h3>
-        <div class="tags">
-          <span class="tag">Landscape Intelligence</span>
-          <span class="tag">Robotics</span>
-          <span class="tag">Remote Sensing</span>
-          <span class="tag">Digital Twins</span>
-          <span class="tag">Biodiversity Monitoring</span>
-          <span class="tag">Carbon Intelligence</span>
+        <div class="role">
+          Ikaraam Ullah<br>
+          Solutions Architect
         </div>
       </div>
 
-      <div class="section">
-        <h3>Open to Conversations With</h3>
-        <div class="tags">
-          <span class="tag">Universities</span>
-          <span class="tag">Environmental organisations</span>
-          <span class="tag">Robotics companies</span>
-          <span class="tag">Technology partners</span>
-          <span class="tag">Landowners</span>
-          <span class="tag">Conservation organisations</span>
+      <p class="intro">
+        Deangarden brings together robotics, remote sensing and digital twins
+        to build persistent landscape intelligence that helps observe,
+        understand and steward natural environments.
+        <br><br>
+        I welcome conversations with people and organisations working across
+        environmental technology, sensing, conservation and resilient landscape management.
+      </p>
+
+      <div class="links">
+        <a class="link" href="https://www.linkedin.com/in/ikaraam/">Connect on LinkedIn</a>
+        <a class="link secondary" href="mailto:contact@deangarden.org">contact@deangarden.org</a>
+      </div>
+
+      <div class="grid">
+        <div class="section">
+          <h3>Current Focus</h3>
+          <div class="tags">
+            <span class="tag">Landscape Intelligence</span>
+            <span class="tag">Robotics</span>
+            <span class="tag">Remote Sensing</span>
+            <span class="tag">Digital Twins</span>
+            <span class="tag">Biodiversity Monitoring</span>
+            <span class="tag">Carbon Intelligence</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3>Open to Conversations With</h3>
+          <div class="tags">
+            <span class="tag">Universities</span>
+            <span class="tag">Environmental organisations</span>
+            <span class="tag">Robotics companies</span>
+            <span class="tag">Technology partners</span>
+            <span class="tag">Landowners</span>
+            <span class="tag">Conservation organisations</span>
+          </div>
         </div>
       </div>
+    </section>
+
+    <div class="footer">
+      Building landscape intelligence for natural environments.<br><br>
+      <a href="/">← Back to Deangarden</a>
     </div>
 
-  </section>
-
-  <div class="footer">
-    Building landscape intelligence for natural environments.<br><br>
-    <a href="/">← Back to Deangarden</a>
   </div>
-
 </main>
 </body>
 </html>
